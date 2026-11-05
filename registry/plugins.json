@@ -54,6 +54,102 @@
       "plugin_id": "plugins_6aeca50842a081918da8fbb83657c622",
       "role": "utility",
       "status": "registered"
+    },
+    {
+      "key": "someone-saw-that-studio",
+      "plugin_id": "plugins_6aeca4f3580c8191b68124842805533e",
+      "role": "workspace",
+      "status": "registered"
+    },
+    {
+      "key": "meridian-read-aloud-lab",
+      "plugin_id": "plugins_6aeb370cb2248191a561933c2d3010b4",
+      "role": "utility",
+      "status": "registered"
+    },
+    {
+      "key": "lilt-voice-plugin-studio",
+      "plugin_id": "plugins_6aebb971f7048191a2e29baf8633468a",
+      "role": "utility",
+      "status": "registered"
+    },
+    {
+      "key": "lilt-voice-director",
+      "plugin_id": "plugins_6aebb56cbe1c8191ac176d5f70988a48",
+      "role": "utility",
+      "status": "registered"
+    },
+    {
+      "key": "bright-bite-native-voice-director",
+      "plugin_id": "plugins_6aeb92f593fc8191899c961e559a5915",
+      "role": "utility",
+      "status": "registered"
+    },
+    {
+      "key": "bright-bite-voice-control-room",
+      "plugin_id": "plugins_6aeb92ef02b081918abbe62c707447e1",
+      "role": "utility",
+      "status": "registered"
+    },
+    {
+      "key": "meridian-os",
+      "plugin_id": "plugins_6ae793ba5bcc81919cf69a69a885be2d",
+      "role": "utility",
+      "status": "registered"
+    },
+    {
+      "key": "frame-studio",
+      "plugin_id": "plugins_6ac748df95ac8191ad4b925ada643a5c",
+      "role": "utility",
+      "status": "registered"
+    },
+    {
+      "key": "directors-booth-native",
+      "plugin_id": "plugins_6ac51edf59008191892255f80c55b68f",
+      "role": "utility",
+      "status": "registered"
+    },
+    {
+      "key": "gary-native-studio",
+      "plugin_id": "plugins_6adff9fc146081919f0d30e4cf66dae7",
+      "role": "utility",
+      "status": "registered"
+    },
+    {
+      "key": "produce-studio",
+      "plugin_id": "plugins_6adfbb6cf0cc81919a3c179ec21b101d",
+      "role": "utility",
+      "status": "registered"
+    },
+    {
+      "key": "idea",
+      "plugin_id": "plugins_6acc1b86c138819198fba3a6b5cf1a51",
+      "role": "utility",
+      "status": "registered"
+    },
+    {
+      "key": "speak-native-plugin",
+      "plugin_id": "plugins_6acf5753c2188191902be94daaf5a871",
+      "role": "utility",
+      "status": "registered"
+    },
+    {
+      "key": "the-moment",
+      "plugin_id": "plugins_6acf3f6884fc81919d365117b2fe6ddb",
+      "role": "utility",
+      "status": "registered"
+    },
+    {
+      "key": "diction",
+      "plugin_id": "plugins_6acf16c0fe708191be8e5b4235d7b4b5",
+      "role": "utility",
+      "status": "registered"
+    },
+    {
+      "key": "alt-cast",
+      "plugin_id": "plugins_6acfc2d9d8f08191b5211b3eeef4ed7f",
+      "role": "utility",
+      "status": "registered"
     }
   ]
 }
