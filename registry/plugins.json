@@ -1,0 +1,59 @@
+{
+  "version": "1.0.0",
+  "entries": [
+    {
+      "key": "meridian-master-workspace",
+      "plugin_id": "plugins_6aeca50b92f081918e2d00920e64007b",
+      "role": "master",
+      "status": "registered"
+    },
+    {
+      "key": "meridian-native-router",
+      "plugin_id": "plugins_6aeca50f62188191a1c56bf9a6390e1d",
+      "role": "router",
+      "status": "registered"
+    },
+    {
+      "key": "gary-pmt-production-lab",
+      "plugin_id": "plugins_6aeca5320df481918a1d526a535ec101",
+      "role": "workspace",
+      "status": "registered"
+    },
+    {
+      "key": "glenn-tape-scout-evidence",
+      "plugin_id": "plugins_6aeca4f629fc8191b83bf43f0f5ba92b",
+      "role": "workspace",
+      "status": "registered"
+    },
+    {
+      "key": "three-d-reflection-workspace",
+      "plugin_id": "plugins_6aeca4fd87c48191bc6d5ea4a7266259",
+      "role": "workspace",
+      "status": "registered"
+    },
+    {
+      "key": "gary-kids-tv-studio",
+      "plugin_id": "plugins_6aeca501b10481918c7080cccc7cd8c2",
+      "role": "workspace",
+      "status": "registered"
+    },
+    {
+      "key": "drake-future-studio",
+      "plugin_id": "plugins_6aeca4f0c2888191a5777e08c49e2de5",
+      "role": "workspace",
+      "status": "registered"
+    },
+    {
+      "key": "original-parody-universe",
+      "plugin_id": "plugins_6aeca5052a0081918c6ce157b5083f38",
+      "role": "workspace",
+      "status": "registered"
+    },
+    {
+      "key": "meridian-continuity-vault",
+      "plugin_id": "plugins_6aeca50842a081918da8fbb83657c622",
+      "role": "utility",
+      "status": "registered"
+    }
+  ]
+}
