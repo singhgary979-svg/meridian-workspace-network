@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "1.0.0",
+  "required": [
+    "key",
+    "pluginId",
+    "purpose",
+    "stateMode",
+    "handoffVersion"
+  ],
+  "properties": {
+    "key": "registry key",
+    "pluginId": "registered ChatGPT plugin identifier",
+    "purpose": "narrow project purpose",
+    "stateMode": [
+      "none",
+      "user-provided-json",
+      "verified-connected-backend"
+    ],
+    "handoffVersion": "1.0.0",
+    "continuityPolicy": "explicit opt-in",
+    "privateDataInGit": false
+  }
+}
