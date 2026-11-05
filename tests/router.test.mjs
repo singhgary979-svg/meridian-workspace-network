@@ -1,0 +1,15 @@
+import assert from "node:assert/strict";
+import { route } from "../src/router.mjs";
+import { validateRegistry, handoff } from "../src/master.mjs";
+import { readFileSync } from "node:fs";
+const registry = JSON.parse(readFileSync(new URL("../registry/plugins.json", import.meta.url)));
+assert.equal(validateRegistry(registry), true);
+assert.equal(route("Investigate Glenn Tape Scout", registry.entries).target, "glenn-tape-scout-evidence");
+assert.equal(route("Make a Gary kids-TV episode", registry.entries).target, "gary-kids-tv-studio");
+assert.equal(route("Glenn Tape Scout and 3-D", registry.entries).target, "meridian-master-workspace");
+assert.equal(route("Anything else", registry.entries).target, null);
+assert.equal(route("Anything else", registry.entries, {explicitTarget:"three-d-reflection-workspace"}).target, "three-d-reflection-workspace");
+assert.equal(route("Glenn Tape Scout", registry.entries).invoked, false);
+assert.throws(() => handoff({target:"a",sourceProject:"b",payload:{secret:true}}));
+assert.equal(handoff({target:"a",sourceProject:"b",payload:{ok:true},approved:true}).approvalRecorded,true);
+console.log("PASS: 8 routing, registry and isolation checks");
