@@ -1,0 +1,19 @@
+name: Validate Meridian Network
+on:
+  push:
+    branches: [main]
+  pull_request:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Run isolated router tests
+        run: npm test
+      - name: Check registry JSON
+        run: node -e "const r=require('./registry/plugins.json'); if(!Array.isArray(r.entries)||!r.entries.length)process.exit(1)"
