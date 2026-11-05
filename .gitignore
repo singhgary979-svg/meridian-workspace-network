@@ -1,0 +1,15 @@
+node_modules/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.bak
+*.backup
+*.private.json
+*saved-state*.json
+*personal-export*.json
+.DS_Store
+coverage/
