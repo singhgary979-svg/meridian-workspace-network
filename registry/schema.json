@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Meridian plugin registry",
+  "type": "object",
+  "required": [
+    "version",
+    "entries"
+  ],
+  "properties": {
+    "version": {
+      "type": "string"
+    },
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "key",
+          "plugin_id",
+          "role",
+          "status"
+        ],
+        "properties": {
+          "key": {
+            "type": "string"
+          },
+          "plugin_id": {
+            "type": "string"
+          },
+          "role": {
+            "enum": [
+              "workspace",
+              "master",
+              "router",
+              "utility"
+            ]
+          },
+          "status": {
+            "enum": [
+              "registered",
+              "verified-connected",
+              "planned"
+            ]
+          },
+          "project": {
+            "type": "string"
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
