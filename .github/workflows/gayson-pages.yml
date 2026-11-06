@@ -5,6 +5,7 @@ on:
     paths:
       - 'gayson-control-center/**'
       - 'nano-voice-lab/**'
+      - 'deployment-control-room/**'
       - '.github/workflows/gayson-pages.yml'
   workflow_dispatch:
 permissions:
@@ -31,6 +32,8 @@ jobs:
           cp gayson-control-center/index.html _site/index.html
           mkdir -p _site/nano-voice-lab
           cp nano-voice-lab/index.html _site/nano-voice-lab/index.html
+          mkdir -p _site/deployment-control-room
+          cp deployment-control-room/index.html _site/deployment-control-room/index.html
           printf 'User-agent: *\nDisallow: /\n' > _site/robots.txt
           if grep -E 'THE_BANQUET_EMBER|3-D_Evening_Awareness|3-D_Timing_And_Friday' _site/index.html; then
             echo "Private source filename found; refusing deployment"
