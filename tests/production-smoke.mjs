@@ -5,7 +5,7 @@ const root = (process.env.MERIDIAN_PAGES_URL || "https://singhgary979-svg.github
 const routes = [
   ["GAYSON", "", "GAYSON Industries"],
   ["Nano Voice Lab", "nano-voice-lab/", "Meridian OS · Nano Voice Lab"],
-  ["Deployment Control Room", "deployment-control-room/", "GAYSON | Meridian Deployment Control Room"],
+  ["Deployment Control Room", "deployment-control-room/", "GAYSON | Meridian Pages Recovery Control Room"],
   ["Callback Committee", "callback-committee/", "The Callback Committee"],
   ["Gary Knows Stats", "gary-knows-stats/", "Gary Knows Stats"]
 ];
