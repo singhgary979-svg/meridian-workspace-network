@@ -150,6 +150,16 @@
       "plugin_id": "plugins_6acfc2d9d8f08191b5211b3eeef4ed7f",
       "role": "utility",
       "status": "registered"
+    },
+    {
+      "key": "the-callback-committee",
+      "plugin_id": "plugins_6aed5229e8e88191a735027e7c1b79e3",
+      "role": "workspace",
+      "status": "registered",
+      "site": "https://meridian-callback-committee.vercel.app",
+      "storage": "browser-local-only",
+      "sync": "manual-json",
+      "scope": "all-podcasts"
     }
   ]
 }
