@@ -1,0 +1,44 @@
+name: Publish GAYSON Control Center
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'gayson-control-center/**'
+      - '.github/workflows/gayson-pages.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: gayson-pages
+  cancel-in-progress: false
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check out GitHub source
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - name: Prepare public-only site
+        run: |
+          mkdir -p _site
+          cp gayson-control-center/index.html _site/index.html
+          printf 'User-agent: *\nDisallow: /\n' > _site/robots.txt
+          if grep -E 'THE_BANQUET_EMBER|3-D_Evening_Awareness|3-D_Timing_And_Friday' _site/index.html; then
+            echo "Private source filename found; refusing deployment"
+            exit 1
+          fi
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Upload site-only artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - name: Publish Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
