@@ -53,7 +53,7 @@ const baseline={
  ],
  runs:[
  {number:10,id:42283731162,kind:"Publish GAYSON Control Center",time:"2026-11-06T19:54:36Z",event:"push",status:"failure"},
- {number:26,id:42283731067,kind:"Validate Meridian Network",time:"2026-11-06T19:54:36Z",event:"push",status:"success"},
+ {number:26,id:42283731067,kind:"Validate Meridian Network",time:"2026-11-06 (exact time unrecorded)",event:"push",status:"success"},
  {number:9,id:42279895040,kind:"Publish GAYSON Control Center",time:"2026-11-06T19:28:16Z",event:"push",status:"failure"},
  {number:8,id:42279593723,kind:"Publish GAYSON Control Center",time:"2026-11-06T19:26:10Z",event:"workflow_dispatch",status:"failure"},
  {number:7,id:42279564280,kind:"Publish GAYSON Control Center",time:"2026-11-06T19:25:58Z",event:"workflow_dispatch",status:"failure"},
@@ -164,6 +164,12 @@ finally{btn.disabled=false;btn.textContent="Refresh public GitHub evidence"}
 if(!state.checkpoints.some(c=>c.name===baseline.source_checkpoint)){
  state.checkpoints.push({name:baseline.source_checkpoint,at:"2026-11-06T19:57:25+00:00",summary:"Recovered Library snapshot · publication #10 blocked",origin:"Library archived checkpoint",data:clone(baseline)});
  state.revisions.unshift({at:now(),action:"Recovery seed restored",detail:baseline.source_checkpoint+" (archived snapshot, not live deployment)"});
+ persist();
+}
+if(!state.checkpoints.some(c=>c.name==="GAYSON-PAGES-RECOVERY-2026-11-06-INITIAL")){
+ const n="GAYSON-PAGES-RECOVERY-2026-11-06-INITIAL";
+ state.checkpoints.unshift(snapshot(n));
+ state.revisions.unshift({at:now(),action:"Named recovery checkpoint",detail:n+"; pre-publication state, not a deployment receipt"});
  persist();
 }
 render();
