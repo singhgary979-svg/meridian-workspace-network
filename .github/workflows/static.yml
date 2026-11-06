@@ -33,11 +33,25 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
+      - name: Prepare curated public-only Pages artifact
+        run: |
+          set -eu
+          mkdir -p _site/nano-voice-lab _site/deployment-control-room _site/callback-committee _site/gary-knows-stats
+          cp gayson-control-center/index.html _site/index.html
+          cp nano-voice-lab/index.html _site/nano-voice-lab/index.html
+          cp deployment-control-room/index.html _site/deployment-control-room/index.html
+          cp sites/callback-committee/index.html _site/callback-committee/index.html
+          cp workspaces/gary-knows-stats-site/index.html _site/gary-knows-stats/index.html
+          printf 'User-agent: *\nDisallow: /\n' > _site/robots.txt
+          if grep -RE 'THE_BANQUET_EMBER|3-D_Evening_Awareness|3-D_Timing_And_Friday' _site --include='*.html'; then
+            echo "Known private filename marker found; refusing publication"
+            exit 1
+          fi
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload entire repository
-          path: '.'
+          # Upload only the curated public static artifact, never repository internals
+          path: '_site'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
