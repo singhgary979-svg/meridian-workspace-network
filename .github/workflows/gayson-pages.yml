@@ -1,19 +1,12 @@
 name: Publish GAYSON Control Center
 on:
-  push:
-    branches: [main]
-    paths:
-      - 'gayson-control-center/**'
-      - 'nano-voice-lab/**'
-      - 'deployment-control-room/**'
-      - '.github/workflows/gayson-pages.yml'
   workflow_dispatch:
 permissions:
   contents: read
   pages: write
   id-token: write
 concurrency:
-  group: gayson-pages
+  group: pages
   cancel-in-progress: false
 jobs:
   deploy:
@@ -32,8 +25,10 @@ jobs:
           cp gayson-control-center/index.html _site/index.html
           mkdir -p _site/nano-voice-lab
           cp nano-voice-lab/index.html _site/nano-voice-lab/index.html
-          mkdir -p _site/deployment-control-room
+          mkdir -p _site/deployment-control-room _site/callback-committee _site/gary-knows-stats
           cp deployment-control-room/index.html _site/deployment-control-room/index.html
+          cp sites/callback-committee/index.html _site/callback-committee/index.html
+          cp workspaces/gary-knows-stats-site/index.html _site/gary-knows-stats/index.html
           printf 'User-agent: *\nDisallow: /\n' > _site/robots.txt
           if grep -E 'THE_BANQUET_EMBER|3-D_Evening_Awareness|3-D_Timing_And_Friday' _site/index.html; then
             echo "Private source filename found; refusing deployment"
