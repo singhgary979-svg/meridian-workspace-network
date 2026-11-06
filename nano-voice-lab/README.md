@@ -1,6 +1,6 @@
 # Meridian OS — Nano Voice Lab
 
-A mobile-first **research-only** voice/audio verification lab published as a separate path on GitHub Pages. It does **not** connect to, modify, or deploy the existing LIVEWIRE Multi-Voice Studio or its production runtime.
+A mobile-first **research-only** voice/audio verification lab prepared for an independent subpath on GitHub Pages. It does **not** connect to, modify, or deploy the existing LIVEWIRE Multi-Voice Studio or its production runtime.
 
 ## Scope and evidence
 
@@ -21,6 +21,8 @@ The optional external `@gradio/client` is loaded **only after** explicit user-in
 Browser localStorage is device- and origin-specific. It is **not** automatic sync with native ChatGPT Sites or other devices. Export a JSON backup before changing browsers. Large audio clips may need to be retained separately. Keep private reference recordings, tokens, and personal transcripts out of this GitHub repository.
 
 ## Publishing
+
+**Current deployment blocker (November 6, 2026):** GitHub Actions ran the static build, but `actions/configure-pages@v5` failed because Pages is not enabled/configured for this private repository. Enable **Settings → Pages → Build and deployment → GitHub Actions** before rerunning the workflow. Private-repo Pages availability depends on the GitHub plan; do not change repository visibility without reviewing its contents.
 
 The GitHub Pages workflow preserves the previously published GAYSON Control Center at the root and adds this lab only under `/nano-voice-lab/`. The original LIVEWIRE Site and model production deployment are not touched.
 
