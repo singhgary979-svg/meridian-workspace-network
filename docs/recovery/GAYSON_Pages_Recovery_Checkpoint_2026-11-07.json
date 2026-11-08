@@ -1,0 +1,789 @@
+{
+  "schema": "meridian-gayson-deployment-control-room/1.0",
+  "name": "GAYSON GitHub Pages Recovery Control Room",
+  "created": "2026-11-06",
+  "savedAt": null,
+  "source_checkpoint": "GAYSON-PAGES-RECOVERY-2026-11-07-LEGACY-SOURCE-BLOCKED",
+  "checkpoint_provenance": "Restored from GAYSON-PAGES-RECOVERY-2026-11-06-LEGACY-SOURCE-BLOCKED; fresh GitHub readback 2026-11-07",
+  "baseline": {
+    "archived_receipt_date": "2026-11-05",
+    "archived_visibility": "private",
+    "archived_hosting": "not_live",
+    "archived_sites_sync": "not_implemented",
+    "archived_workflow_run": "42180645706",
+    "source": "GAYSON_GitHub_Deployment_Receipt_2026-11-05.json (Library)"
+  },
+  "repo": {
+    "full_name": "singhgary979-svg/meridian-workspace-network",
+    "visibility": "public",
+    "default_branch": "main",
+    "branch_sha": "f86b4c9e5ed1d4db4b953024c00dd270a74a106d",
+    "branch_protected": false,
+    "source": "Connected GitHub repo and branch readback on 2026-11-07; main unchanged"
+  },
+  "preservation": {
+    "gayson": "gayson-control-center/index.html",
+    "nano": "nano-voice-lab/index.html",
+    "workflow": ".github/workflows/gayson-pages.yml",
+    "native_sites_sync": "not_implemented",
+    "primary_workflow": ".github/workflows/static.yml",
+    "manual_workflow": ".github/workflows/gayson-pages.yml"
+  },
+  "pages": {
+    "source": "legacy (Pages REST API read in static #12 on 2026-11-06)",
+    "url": "https://singhgary979-svg.github.io/meridian-workspace-network/",
+    "url_provenance": "GitHub Actions static #9 Pages API GET HTTP 200 and official html_url",
+    "http_status": "uncertain",
+    "http_note": "Static run #12 browser tests observed GAYSON root HTTP 200 with unexpected repository page title; Nano and recovery room 200; Callback Committee and Gary Knows Stats 404. No independent November 7 live browser check succeeded.",
+    "last_check": "2026-11-06T21:04:58Z"
+  },
+  "tasks": [
+    {
+      "id": "receipt",
+      "label": "Recover prior deployment receipt",
+      "state": "verified",
+      "origin": "Library record",
+      "note": "Recovered archival state: repository was private on 2026-11-05; hosting not live."
+    },
+    {
+      "id": "repo",
+      "label": "Verify repository visibility",
+      "state": "verified",
+      "origin": "Connected GitHub repository API, November 7",
+      "note": "Public repository confirmed."
+    },
+    {
+      "id": "branch",
+      "label": "Verify branch, workflow and paths",
+      "state": "verified",
+      "origin": "Connected GitHub branch + files, November 7",
+      "note": "main HEAD f86b4c9e5ed1d4db4b953024c00dd270a74a106d; GAYSON source, Nano, control room, and three workflow files present."
+    },
+    {
+      "id": "validation",
+      "label": "Verify Validate Meridian Network run #26",
+      "state": "verified",
+      "origin": "GitHub Actions run #38",
+      "note": "Validation #38 (42293550171) succeeded; this is not Pages verification."
+    },
+    {
+      "id": "pages",
+      "label": "Switch Pages source to GitHub Actions",
+      "state": "blocked",
+      "origin": "Authenticated GitHub Actions static #12 logs",
+      "note": "Pages source readback: build_type = legacy. PUT build_type workflow: HTTP 403, Resource not accessible by integration. Owner must use Settings > Pages."
+    },
+    {
+      "id": "published",
+      "label": "Recheck stable curated Pages publication",
+      "state": "uncertain",
+      "origin": "GitHub Actions static #12 browser test log",
+      "note": "Curated upload/deploy steps passed, but browser suite failed: GAYSON root wrong title and two routes 404. Stable five-route publication not established."
+    },
+    {
+      "id": "rerun",
+      "label": "Rerun current static publication workflow",
+      "state": "blocked",
+      "origin": "Owner Pages setting not confirmed",
+      "note": "After Settings > Pages Source = GitHub Actions, rerun Deploy static content to Pages (static.yml) on main; do not rerun historical GAYSON #10."
+    },
+    {
+      "id": "url",
+      "label": "Verify all production routes at official live URL",
+      "state": "uncertain",
+      "origin": "Static #12 browser tests; no new Nov 7 check",
+      "note": "Official Pages address identified previously, but current intended content across all five routes not independently confirmed."
+    },
+    {
+      "id": "checkpoint",
+      "label": "Save final named deployed checkpoint",
+      "state": "missing",
+      "origin": "Recovery checkpoint exists; final deployed checkpoint pending",
+      "note": "November 7 blocked-state recovery is preserved; save a distinct VERIFIED-PUBLISHED checkpoint only after full success."
+    }
+  ],
+  "runs": [
+    {
+      "number": 12,
+      "id": 42293550055,
+      "kind": "Deploy static content to Pages",
+      "time": "2026-11-06T21:03:38Z",
+      "event": "push",
+      "status": "failure"
+    },
+    {
+      "number": 38,
+      "id": 42293550171,
+      "kind": "Validate Meridian Network",
+      "time": "2026-11-06T21:03:38Z",
+      "event": "push",
+      "status": "success"
+    },
+    {
+      "number": 12,
+      "id": 42293549567,
+      "kind": "pages build and deployment",
+      "time": "2026-11-06T21:03:38Z",
+      "event": "push",
+      "status": "success"
+    },
+    {
+      "number": 11,
+      "id": 42293119477,
+      "kind": "Deploy static content to Pages",
+      "time": "2026-11-06T21:00:39Z",
+      "event": "push",
+      "status": "failure"
+    },
+    {
+      "number": 10,
+      "id": 42292823768,
+      "kind": "Deploy static content to Pages",
+      "time": "2026-11-06T20:58:33Z",
+      "event": "push",
+      "status": "failure"
+    },
+    {
+      "number": 37,
+      "id": 42293119327,
+      "kind": "Validate Meridian Network",
+      "time": "2026-11-06T21:00:39Z",
+      "event": "push",
+      "status": "success"
+    },
+    {
+      "number": 35,
+      "id": 42292157846,
+      "kind": "Validate Meridian Network",
+      "time": "2026-11-06T20:53:33Z",
+      "event": "push",
+      "status": "success"
+    },
+    {
+      "number": 9,
+      "id": 42292157650,
+      "kind": "Deploy static content to Pages",
+      "time": "2026-11-06T20:53:33Z",
+      "event": "push",
+      "status": "uncertain"
+    },
+    {
+      "number": 5,
+      "id": 42289304076,
+      "kind": "Deploy static content to Pages",
+      "time": "2026-11-06T20:33:06Z",
+      "event": "push",
+      "status": "success"
+    },
+    {
+      "number": 10,
+      "id": 42283731162,
+      "kind": "Publish GAYSON Control Center",
+      "time": "2026-11-06T19:54:36Z",
+      "event": "push",
+      "status": "failure"
+    },
+    {
+      "number": 26,
+      "id": 42283731067,
+      "kind": "Validate Meridian Network",
+      "time": "2026-11-06 (exact time unrecorded)",
+      "event": "push",
+      "status": "success"
+    },
+    {
+      "number": 9,
+      "id": 42279895040,
+      "kind": "Publish GAYSON Control Center",
+      "time": "2026-11-06T19:28:16Z",
+      "event": "push",
+      "status": "failure"
+    },
+    {
+      "number": 8,
+      "id": 42279593723,
+      "kind": "Publish GAYSON Control Center",
+      "time": "2026-11-06T19:26:10Z",
+      "event": "workflow_dispatch",
+      "status": "failure"
+    },
+    {
+      "number": 7,
+      "id": 42279564280,
+      "kind": "Publish GAYSON Control Center",
+      "time": "2026-11-06T19:25:58Z",
+      "event": "workflow_dispatch",
+      "status": "failure"
+    },
+    {
+      "number": 6,
+      "id": 42279563477,
+      "kind": "Publish GAYSON Control Center",
+      "time": "2026-11-06T19:25:58Z",
+      "event": "workflow_dispatch",
+      "status": "failure"
+    },
+    {
+      "number": 5,
+      "id": 42279382023,
+      "kind": "Publish GAYSON Control Center",
+      "time": "2026-11-06T19:24:44Z",
+      "event": "workflow_dispatch",
+      "status": "failure"
+    },
+    {
+      "number": 4,
+      "id": 42279364410,
+      "kind": "Publish GAYSON Control Center",
+      "time": "2026-11-06T19:24:37Z",
+      "event": "workflow_dispatch",
+      "status": "failure"
+    },
+    {
+      "number": 23,
+      "id": 42279894939,
+      "kind": "Validate Meridian Network",
+      "time": "2026-11-06T19:28:16Z",
+      "event": "push",
+      "status": "success"
+    }
+  ],
+  "accessHistory": [
+    {
+      "date": "2026-11-05",
+      "state": "private",
+      "origin": "Archived Library receipt; historical observation"
+    },
+    {
+      "date": "2026-11-06",
+      "state": "public",
+      "origin": "GitHub authenticated repository read; exact transition time unknown"
+    }
+  ],
+  "privacy": [
+    {
+      "label": "GAYSON HTML: archived private filename patterns absent",
+      "state": "verified",
+      "note": "Targeted text check of current index.html; not a comprehensive data-leak audit."
+    },
+    {
+      "label": "Nano HTML: archived private filename patterns absent",
+      "state": "verified",
+      "note": "Targeted text check of current index.html; not a comprehensive data-leak audit."
+    },
+    {
+      "label": "No credentials or personal JSON committed",
+      "state": "uncertain",
+      "note": "No repository-wide secret or content audit completed."
+    },
+    {
+      "label": "README says public",
+      "state": "verified",
+      "note": "README.md currently describes the repository as public."
+    },
+    {
+      "label": "SECURITY.md says keep private",
+      "state": "blocked",
+      "note": "Historical instruction conflicts with current public repository; preserve document for review."
+    }
+  ],
+  "pages_source_diagnostic": {
+    "run_id": 42293550055,
+    "http_update": 403,
+    "http_read": 200,
+    "build_type": "legacy",
+    "exact_error": "Resource not accessible by integration",
+    "origin": "Verified static #12 job logs, 2026-11-06T21:03:47Z",
+    "verified": true
+  },
+  "diagnostics": {
+    "run_id": 42283731162,
+    "run_number": 10,
+    "exact_error": "Create Pages site failed: Resource not accessible by integration",
+    "provenance": "Authenticated GitHub Actions job log, 2026-11-06",
+    "recorded_at": "2026-11-06",
+    "verified": true
+  },
+  "checkpoints": [
+    {
+      "name": "GAYSON-PAGES-RECOVERY-2026-11-07-LEGACY-SOURCE-BLOCKED",
+      "at": "2026-11-07",
+      "summary": "Blocked Pages source; static #12 browser suite failed, current live site not independently verified",
+      "origin": "November 7 GitHub readback and November 6 run #12 logs",
+      "data": {
+        "schema": "meridian-gayson-deployment-control-room/1.0",
+        "name": "GAYSON GitHub Pages Recovery Control Room",
+        "created": "2026-11-06",
+        "savedAt": null,
+        "source_checkpoint": "GAYSON-PAGES-RECOVERY-2026-11-07-LEGACY-SOURCE-BLOCKED",
+        "checkpoint_provenance": "Restored from GAYSON-PAGES-RECOVERY-2026-11-06-LEGACY-SOURCE-BLOCKED; fresh GitHub readback 2026-11-07",
+        "baseline": {
+          "archived_receipt_date": "2026-11-05",
+          "archived_visibility": "private",
+          "archived_hosting": "not_live",
+          "archived_sites_sync": "not_implemented",
+          "archived_workflow_run": "42180645706",
+          "source": "GAYSON_GitHub_Deployment_Receipt_2026-11-05.json (Library)"
+        },
+        "repo": {
+          "full_name": "singhgary979-svg/meridian-workspace-network",
+          "visibility": "public",
+          "default_branch": "main",
+          "branch_sha": "f86b4c9e5ed1d4db4b953024c00dd270a74a106d",
+          "branch_protected": false,
+          "source": "Connected GitHub repo and branch readback on 2026-11-07; main unchanged"
+        },
+        "preservation": {
+          "gayson": "gayson-control-center/index.html",
+          "nano": "nano-voice-lab/index.html",
+          "workflow": ".github/workflows/gayson-pages.yml",
+          "native_sites_sync": "not_implemented",
+          "primary_workflow": ".github/workflows/static.yml",
+          "manual_workflow": ".github/workflows/gayson-pages.yml"
+        },
+        "pages": {
+          "source": "legacy (Pages REST API read in static #12 on 2026-11-06)",
+          "url": "https://singhgary979-svg.github.io/meridian-workspace-network/",
+          "url_provenance": "GitHub Actions static #9 Pages API GET HTTP 200 and official html_url",
+          "http_status": "uncertain",
+          "http_note": "Static run #12 browser tests observed GAYSON root HTTP 200 with unexpected repository page title; Nano and recovery room 200; Callback Committee and Gary Knows Stats 404. No independent November 7 live browser check succeeded.",
+          "last_check": "2026-11-06T21:04:58Z"
+        },
+        "tasks": [
+          {
+            "id": "receipt",
+            "label": "Recover prior deployment receipt",
+            "state": "verified",
+            "origin": "Library record",
+            "note": "Recovered archival state: repository was private on 2026-11-05; hosting not live."
+          },
+          {
+            "id": "repo",
+            "label": "Verify repository visibility",
+            "state": "verified",
+            "origin": "Connected GitHub repository API, November 7",
+            "note": "Public repository confirmed."
+          },
+          {
+            "id": "branch",
+            "label": "Verify branch, workflow and paths",
+            "state": "verified",
+            "origin": "Connected GitHub branch + files, November 7",
+            "note": "main HEAD f86b4c9e5ed1d4db4b953024c00dd270a74a106d; GAYSON source, Nano, control room, and three workflow files present."
+          },
+          {
+            "id": "validation",
+            "label": "Verify Validate Meridian Network run #26",
+            "state": "verified",
+            "origin": "GitHub Actions run #38",
+            "note": "Validation #38 (42293550171) succeeded; this is not Pages verification."
+          },
+          {
+            "id": "pages",
+            "label": "Switch Pages source to GitHub Actions",
+            "state": "blocked",
+            "origin": "Authenticated GitHub Actions static #12 logs",
+            "note": "Pages source readback: build_type = legacy. PUT build_type workflow: HTTP 403, Resource not accessible by integration. Owner must use Settings > Pages."
+          },
+          {
+            "id": "published",
+            "label": "Recheck stable curated Pages publication",
+            "state": "uncertain",
+            "origin": "GitHub Actions static #12 browser test log",
+            "note": "Curated upload/deploy steps passed, but browser suite failed: GAYSON root wrong title and two routes 404. Stable five-route publication not established."
+          },
+          {
+            "id": "rerun",
+            "label": "Rerun current static publication workflow",
+            "state": "blocked",
+            "origin": "Owner Pages setting not confirmed",
+            "note": "After Settings > Pages Source = GitHub Actions, rerun Deploy static content to Pages (static.yml) on main; do not rerun historical GAYSON #10."
+          },
+          {
+            "id": "url",
+            "label": "Verify all production routes at official live URL",
+            "state": "uncertain",
+            "origin": "Static #12 browser tests; no new Nov 7 check",
+            "note": "Official Pages address identified previously, but current intended content across all five routes not independently confirmed."
+          },
+          {
+            "id": "checkpoint",
+            "label": "Save final named deployed checkpoint",
+            "state": "missing",
+            "origin": "Recovery checkpoint exists; final deployed checkpoint pending",
+            "note": "November 7 blocked-state recovery is preserved; save a distinct VERIFIED-PUBLISHED checkpoint only after full success."
+          }
+        ],
+        "runs": [
+          {
+            "number": 12,
+            "id": 42293550055,
+            "kind": "Deploy static content to Pages",
+            "time": "2026-11-06T21:03:38Z",
+            "event": "push",
+            "status": "failure"
+          },
+          {
+            "number": 38,
+            "id": 42293550171,
+            "kind": "Validate Meridian Network",
+            "time": "2026-11-06T21:03:38Z",
+            "event": "push",
+            "status": "success"
+          },
+          {
+            "number": 12,
+            "id": 42293549567,
+            "kind": "pages build and deployment",
+            "time": "2026-11-06T21:03:38Z",
+            "event": "push",
+            "status": "success"
+          },
+          {
+            "number": 11,
+            "id": 42293119477,
+            "kind": "Deploy static content to Pages",
+            "time": "2026-11-06T21:00:39Z",
+            "event": "push",
+            "status": "failure"
+          },
+          {
+            "number": 10,
+            "id": 42292823768,
+            "kind": "Deploy static content to Pages",
+            "time": "2026-11-06T20:58:33Z",
+            "event": "push",
+            "status": "failure"
+          },
+          {
+            "number": 37,
+            "id": 42293119327,
+            "kind": "Validate Meridian Network",
+            "time": "2026-11-06T21:00:39Z",
+            "event": "push",
+            "status": "success"
+          },
+          {
+            "number": 35,
+            "id": 42292157846,
+            "kind": "Validate Meridian Network",
+            "time": "2026-11-06T20:53:33Z",
+            "event": "push",
+            "status": "success"
+          },
+          {
+            "number": 9,
+            "id": 42292157650,
+            "kind": "Deploy static content to Pages",
+            "time": "2026-11-06T20:53:33Z",
+            "event": "push",
+            "status": "uncertain"
+          },
+          {
+            "number": 5,
+            "id": 42289304076,
+            "kind": "Deploy static content to Pages",
+            "time": "2026-11-06T20:33:06Z",
+            "event": "push",
+            "status": "success"
+          },
+          {
+            "number": 10,
+            "id": 42283731162,
+            "kind": "Publish GAYSON Control Center",
+            "time": "2026-11-06T19:54:36Z",
+            "event": "push",
+            "status": "failure"
+          },
+          {
+            "number": 26,
+            "id": 42283731067,
+            "kind": "Validate Meridian Network",
+            "time": "2026-11-06 (exact time unrecorded)",
+            "event": "push",
+            "status": "success"
+          },
+          {
+            "number": 9,
+            "id": 42279895040,
+            "kind": "Publish GAYSON Control Center",
+            "time": "2026-11-06T19:28:16Z",
+            "event": "push",
+            "status": "failure"
+          },
+          {
+            "number": 8,
+            "id": 42279593723,
+            "kind": "Publish GAYSON Control Center",
+            "time": "2026-11-06T19:26:10Z",
+            "event": "workflow_dispatch",
+            "status": "failure"
+          },
+          {
+            "number": 7,
+            "id": 42279564280,
+            "kind": "Publish GAYSON Control Center",
+            "time": "2026-11-06T19:25:58Z",
+            "event": "workflow_dispatch",
+            "status": "failure"
+          },
+          {
+            "number": 6,
+            "id": 42279563477,
+            "kind": "Publish GAYSON Control Center",
+            "time": "2026-11-06T19:25:58Z",
+            "event": "workflow_dispatch",
+            "status": "failure"
+          },
+          {
+            "number": 5,
+            "id": 42279382023,
+            "kind": "Publish GAYSON Control Center",
+            "time": "2026-11-06T19:24:44Z",
+            "event": "workflow_dispatch",
+            "status": "failure"
+          },
+          {
+            "number": 4,
+            "id": 42279364410,
+            "kind": "Publish GAYSON Control Center",
+            "time": "2026-11-06T19:24:37Z",
+            "event": "workflow_dispatch",
+            "status": "failure"
+          },
+          {
+            "number": 23,
+            "id": 42279894939,
+            "kind": "Validate Meridian Network",
+            "time": "2026-11-06T19:28:16Z",
+            "event": "push",
+            "status": "success"
+          }
+        ],
+        "accessHistory": [
+          {
+            "date": "2026-11-05",
+            "state": "private",
+            "origin": "Archived Library receipt; historical observation"
+          },
+          {
+            "date": "2026-11-06",
+            "state": "public",
+            "origin": "GitHub authenticated repository read; exact transition time unknown"
+          }
+        ],
+        "privacy": [
+          {
+            "label": "GAYSON HTML: archived private filename patterns absent",
+            "state": "verified",
+            "note": "Targeted text check of current index.html; not a comprehensive data-leak audit."
+          },
+          {
+            "label": "Nano HTML: archived private filename patterns absent",
+            "state": "verified",
+            "note": "Targeted text check of current index.html; not a comprehensive data-leak audit."
+          },
+          {
+            "label": "No credentials or personal JSON committed",
+            "state": "uncertain",
+            "note": "No repository-wide secret or content audit completed."
+          },
+          {
+            "label": "README says public",
+            "state": "verified",
+            "note": "README.md currently describes the repository as public."
+          },
+          {
+            "label": "SECURITY.md says keep private",
+            "state": "blocked",
+            "note": "Historical instruction conflicts with current public repository; preserve document for review."
+          }
+        ],
+        "pages_source_diagnostic": {
+          "run_id": 42293550055,
+          "http_update": 403,
+          "http_read": 200,
+          "build_type": "legacy",
+          "exact_error": "Resource not accessible by integration",
+          "origin": "Verified static #12 job logs, 2026-11-06T21:03:47Z",
+          "verified": true
+        },
+        "diagnostics": {
+          "run_id": 42283731162,
+          "run_number": 10,
+          "exact_error": "Create Pages site failed: Resource not accessible by integration",
+          "provenance": "Authenticated GitHub Actions job log, 2026-11-06",
+          "recorded_at": "2026-11-06",
+          "verified": true
+        },
+        "checkpoints": [],
+        "revisions": [],
+        "lastFetch": null,
+        "notices": [],
+        "routeTests": [
+          {
+            "id": "gayson",
+            "name": "GAYSON root",
+            "path": "/",
+            "source": "gayson-control-center/index.html",
+            "expected": "GAYSON Industries · One-Tap Control Center",
+            "desktop": "200 — WRONG TITLE: Meridian Workspace Network | meridian-workspace-network",
+            "mobile": "200 — WRONG TITLE: Meridian Workspace Network | meridian-workspace-network",
+            "state": "blocked",
+            "origin": "Verified GitHub Actions #12 desktop/mobile Playwright logs"
+          },
+          {
+            "id": "nano",
+            "name": "Nano Voice Lab",
+            "path": "/nano-voice-lab/",
+            "source": "nano-voice-lab/index.html",
+            "expected": "Meridian OS · Nano Voice Lab",
+            "desktop": "200 — expected title and body",
+            "mobile": "200 — expected title and body; generation gate present",
+            "state": "verified",
+            "origin": "Verified GitHub Actions #12 desktop/mobile Playwright logs"
+          },
+          {
+            "id": "control",
+            "name": "Recovery Control Room",
+            "path": "/deployment-control-room/",
+            "source": "deployment-control-room/index.html",
+            "expected": "GAYSON | Meridian Pages Recovery Control Room",
+            "desktop": "200 — expected title and body",
+            "mobile": "200 — expected title and body; checkpoint, local storage, JSON import checks passed",
+            "state": "verified",
+            "origin": "Verified GitHub Actions #12 desktop/mobile Playwright logs"
+          },
+          {
+            "id": "callback",
+            "name": "Callback Committee",
+            "path": "/callback-committee/",
+            "source": "sites/callback-committee/index.html",
+            "expected": "Accessible with intended page content and interactions",
+            "desktop": "404 — Page not found · GitHub Pages",
+            "mobile": "404 — Page not found; Checkpoints button timed out after 30000ms",
+            "state": "blocked",
+            "origin": "Verified GitHub Actions #12 desktop/mobile Playwright logs"
+          },
+          {
+            "id": "stats",
+            "name": "Gary Knows Stats",
+            "path": "/gary-knows-stats/",
+            "source": "workspaces/gary-knows-stats-site/index.html",
+            "expected": "Accessible with intended page content and calculator",
+            "desktop": "404 — Page not found · GitHub Pages",
+            "mobile": "404 — Page not found; calculator missing",
+            "state": "blocked",
+            "origin": "Verified GitHub Actions #12 desktop/mobile Playwright logs"
+          }
+        ]
+      }
+    }
+  ],
+  "revisions": [
+    {
+      "at": "2026-11-07",
+      "action": "UI recovery branch created",
+      "detail": "Isolated branch recovery/gayson-pages-2026-11-07; main left unchanged"
+    },
+    {
+      "at": "2026-11-07",
+      "action": "Static #12 audit",
+      "detail": "Curated deploy passed, browser suite failed; 403 on source update; build_type legacy"
+    },
+    {
+      "at": "2026-11-06",
+      "action": "Latest prior saved checkpoint",
+      "detail": "GAYSON-PAGES-RECOVERY-2026-11-06-LEGACY-SOURCE-BLOCKED"
+    }
+  ],
+  "lastFetch": null,
+  "notices": [],
+  "routeTests": [
+    {
+      "id": "gayson",
+      "name": "GAYSON root",
+      "path": "/",
+      "source": "gayson-control-center/index.html",
+      "expected": "GAYSON Industries · One-Tap Control Center",
+      "desktop": "200 — WRONG TITLE: Meridian Workspace Network | meridian-workspace-network",
+      "mobile": "200 — WRONG TITLE: Meridian Workspace Network | meridian-workspace-network",
+      "state": "blocked",
+      "origin": "Verified GitHub Actions #12 desktop/mobile Playwright logs"
+    },
+    {
+      "id": "nano",
+      "name": "Nano Voice Lab",
+      "path": "/nano-voice-lab/",
+      "source": "nano-voice-lab/index.html",
+      "expected": "Meridian OS · Nano Voice Lab",
+      "desktop": "200 — expected title and body",
+      "mobile": "200 — expected title and body; generation gate present",
+      "state": "verified",
+      "origin": "Verified GitHub Actions #12 desktop/mobile Playwright logs"
+    },
+    {
+      "id": "control",
+      "name": "Recovery Control Room",
+      "path": "/deployment-control-room/",
+      "source": "deployment-control-room/index.html",
+      "expected": "GAYSON | Meridian Pages Recovery Control Room",
+      "desktop": "200 — expected title and body",
+      "mobile": "200 — expected title and body; checkpoint, local storage, JSON import checks passed",
+      "state": "verified",
+      "origin": "Verified GitHub Actions #12 desktop/mobile Playwright logs"
+    },
+    {
+      "id": "callback",
+      "name": "Callback Committee",
+      "path": "/callback-committee/",
+      "source": "sites/callback-committee/index.html",
+      "expected": "Accessible with intended page content and interactions",
+      "desktop": "404 — Page not found · GitHub Pages",
+      "mobile": "404 — Page not found; Checkpoints button timed out after 30000ms",
+      "state": "blocked",
+      "origin": "Verified GitHub Actions #12 desktop/mobile Playwright logs"
+    },
+    {
+      "id": "stats",
+      "name": "Gary Knows Stats",
+      "path": "/gary-knows-stats/",
+      "source": "workspaces/gary-knows-stats-site/index.html",
+      "expected": "Accessible with intended page content and calculator",
+      "desktop": "404 — Page not found · GitHub Pages",
+      "mobile": "404 — Page not found; calculator missing",
+      "state": "blocked",
+      "origin": "Verified GitHub Actions #12 desktop/mobile Playwright logs"
+    }
+  ],
+  "lastAuditDate": "2026-11-07",
+  "latestProductionEvidence": {
+    "run": 12,
+    "id": 42293550055,
+    "observed_at": "2026-11-06T21:04:58Z",
+    "outcome": "failure",
+    "details": "GAYSON root returned HTTP 200 but wrong title; Nano and recovery room HTTP 200 and expected content; Callback Committee and Gary Knows Stats HTTP 404 on desktop and mobile; Pages readback build_type legacy and source update HTTP 403",
+    "source": "Authenticated GitHub Actions workflow run #12 job log"
+  },
+  "PagesSettingsOwnerConfirmation": "missing",
+  "independentLiveBrowserCheck": "not performed; source inaccessible to web reader",
+  "preservationEvidence": {
+    "main_head_at_audit": "f86b4c9e5ed1d4db4b953024c00dd270a74a106d",
+    "workflows": [
+      ".github/workflows/static.yml",
+      ".github/workflows/gayson-pages.yml",
+      ".github/workflows/validate.yml"
+    ],
+    "gayson": "gayson-control-center/index.html",
+    "nano": "nano-voice-lab/index.html",
+    "room": "deployment-control-room/index.html"
+  },
+  "previousRecoveryState": "GAYSON-PAGES-RECOVERY-2026-11-06-LEGACY-SOURCE-BLOCKED",
+  "history": {
+    "prior_named_checkpoints": [
+      "GAYSON-PAGES-BLOCKED-2026-11-06",
+      "GAYSON-PAGES-RECOVERY-2026-11-06-LEGACY-SOURCE-BLOCKED"
+    ],
+    "rollback_policy": "Never change main or re-run older GAYSON workflow from a historical SHA. This JSON checkpoint is locally importable in the control room."
+  }
+}
